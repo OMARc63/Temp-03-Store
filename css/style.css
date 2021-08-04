@@ -45,17 +45,15 @@ body {
     position: relative;
 }
 .main .logo {
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: var(--main-color);
     padding-top: 30px;
-    text-shadow:  5px 5px 30px #6b63ff71;
+}
+.main .logo img {
+    width: 60px;
 }
 .search {
     position: fixed;
     top: 30px;
-    margin-left: 500px;
+    margin-left: 250px;
     min-width: 200px;
     background-color: white;
     padding: 15px;
@@ -107,6 +105,7 @@ body {
 }
 .main-content {
     display: flex;
+    align-items: center;
     padding-top: 15%;
 }
 .main-content .image {
@@ -118,6 +117,7 @@ body {
     }
     .main-content {
         justify-content: center;
+        padding-top: 60%;
     }
 }
 .main-content .image img {
@@ -163,7 +163,7 @@ body {
 }
 .products .products-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 60px;
 }
 .products .product-box {
@@ -183,7 +183,7 @@ body {
 }
 .products .product-box .image img {
     height: 200px;
-    max-width: 230px;
+    max-width: 200px;
 }
 .products .product-box .button {
     background-color: #a166f4;
@@ -198,6 +198,10 @@ body {
 }
 .products .product-box:hover .button {
     display: block;
+}
+.products .text h5 {
+    color: #ccc;
+    font-weight: normal;
 }
 /* End Products Section */
 /* Start Subscribe Section */
@@ -218,11 +222,16 @@ body {
 .sub form input {
     padding: 20px 30px;
     border-radius: 50px;
-    width: 50%;
+    width: 60%;
     border: none;
     box-shadow: 5px 5px 30px #3333333f;
     outline: none;
     margin-left: 85px;
+}
+@media (max-width:767px) {
+    .sub form input {
+        margin-left: 40px;
+    }
 }
 .sub form button {
     padding: 13px 25px;
@@ -240,12 +249,10 @@ body {
     height: 1px;
 }
 .sub .logo {
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: var(--main-color);
     padding-top: 30px;
-    text-shadow:  5px 5px 30px #6b63ff71;
+}
+.sub .logo img {
+    width: 60px;
 }
 .sub ul {
     list-style: none;
@@ -261,6 +268,20 @@ body {
 .sub ul li {
     font-size: 20px;
     color: #333;
+}
+@media (max-width: 767px) {
+    .sub ul {
+        background-color: none;
+        box-shadow: none;
+        flex-wrap: wrap;
+    }
+    .sub ul li {
+        background-color: white;
+        box-shadow: 5px 5px 30px #3333333f;
+        padding: 20px 30px;
+        border-radius: 30px;
+        margin: 20px 30px;
+    }
 }
 /* End Subscribe Section */
 /* Start Footer */
